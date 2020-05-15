@@ -170,6 +170,8 @@ abstract class UpdatePathTestBase extends BrowserTestBase {
     // Install Drupal test site.
     $this->prepareEnvironment();
     $this->runDbTasks();
+    // Allow classes to set database dump files.
+    $this->setDatabaseDumpFiles();
 
     // We are going to set a missing zlib requirement property for usage
     // during the performUpgrade() and tearDown() methods. Also set that the
